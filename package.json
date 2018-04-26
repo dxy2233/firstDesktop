@@ -6,10 +6,15 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test": "vue-cli-service test",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "electron_dev": "npm run build && electron build/electron.js",
+    "electron_build": "electron-packager ./dist/ --platform=win32 --arch=x64 --icon=./public/ccc.ico --overwrite"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "echarts": "^4.0.4",
     "vue": "^2.5.13",
+    "vue-axios": "^2.1.1",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
@@ -21,6 +26,8 @@
     "@vue/eslint-config-standard": "^3.0.0-beta.6",
     "@vue/test-utils": "^1.0.0-beta.10",
     "chai": "^4.1.2",
+    "electron": "^1.8.4",
+    "electron-packager": "^12.0.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.13"
